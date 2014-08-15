@@ -1,0 +1,70 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/models/user.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/models/message.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/controllers/messages_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1408085152
+  }
+}
