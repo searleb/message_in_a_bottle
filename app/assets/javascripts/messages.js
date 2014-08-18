@@ -8,6 +8,7 @@ $(document).ready(function() {
 			type: 'get',
 			dataType: 'json',
 		}).done(function(response){
+			console.log(response);
 			for (var i = response.message.length - 1; i >= 0; i--) {
 				blobs.messageId = response.message[i].id;
 				blobs.messageUrl = '/messages/' + blobs.messageId 
