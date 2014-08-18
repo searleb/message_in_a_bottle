@@ -1,7 +1,7 @@
 class AjaxController < ApplicationController
 
 	def lookup
-		messages = Message.all.sample(15)
+		messages = Message.all.sample(20)
 		messages = messages.each do |m|
 			m.id
 		end
