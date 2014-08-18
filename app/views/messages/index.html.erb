@@ -1,7 +1,7 @@
 <div id='messages-container'>
- <%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
 
 	<% if current_user %>
+ 			<%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
 			<%= form_for @new_message do |f| %>
 			<p>
 				<%= f.label :message %>
