@@ -1,4 +1,4 @@
 User.destroy_all
 Message.destroy_all
 
-FactoryGirl.create_list(:message, 100)
+FactoryGirl.create(:user_with_messages)

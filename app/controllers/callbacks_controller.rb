@@ -1,4 +1,4 @@
-class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class CallbacksController < Devise::OmniauthCallbacksController
 
   def twitter
     user = User.find_for_oauth(request.env["omniauth.auth"])
@@ -10,5 +10,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.twitter_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+  end
+
+  # def github
+  #   oauthorize "Github"
+  # end
+
+  def passthru
+    render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   end
 end
