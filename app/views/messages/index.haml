@@ -1,2 +1,26 @@
-%h1
-	what?
+%div#container
+
+%ul#scene
+	%li.layer.data-layer
+
+= form_for @new_message do |f|
+	%p
+		= f.label :message
+		= f.text_field :message, :autofocus => true
+	= f.submit
+
+/ :javascript
+/ 	$('#scene').parallax();
+
+/ if @current_user
+/      form
+
+/      leave message here
+
+/ else
+/      link_to sign_in path
+/ end
+%script
+	$(document).ready(function(){
+	$('#scene').parallax();
+	})
