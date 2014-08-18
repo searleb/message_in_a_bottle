@@ -1,7 +1,6 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def twitter
-    oauthorize "Twitter"
 
     user = User.find_for_oauth(request.env["omniauth.auth"])
 
