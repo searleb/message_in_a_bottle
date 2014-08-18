@@ -1,0 +1,35 @@
+<div id='messages-container'>
+
+
+	<%= form_for @new_message do |f| %>
+	<p>
+		<%= f.label :message %>
+		<%= f.text_field :message, :autofocus => true %>
+	</p>
+	<%= f.submit %>
+	<% end %>
+
+</div>
+
+<script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
+
+<!-- <script>
+	vex.dialog.confirm({
+  message: 'Are you absolutely sure you want to destroy the alien planet?',
+  callback: function(value) {
+    return console.log(value ? 'Successfully destroyed the planet.' : 'Chicken.');
+  }
+});</script> -->
+
+<div class="blob"></div>
+
+<script>
+		$('.blob').on('click', function(){
+		console.log('click click')
+		blobs.modal({
+			content: 'Hello?'
+		});
+	});
+</script>
+
+
