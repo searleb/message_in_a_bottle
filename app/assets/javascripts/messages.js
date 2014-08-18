@@ -50,12 +50,22 @@ $(document).ready(function() {
 			
 		blobs.modal = function(){
 			vex.dialog.open({
-  		message: "You have found a message from " + blobs.userId + "." + '<br>' + "The message reads: " + "'" + blobs.userMessage + "'" + "<br>" + "Dated: " + blobs.createdAt,
-  		callback: function(value) {
-    	return console.log(value ? 'Successfully destroyed the planet.' : 'Chicken.');
+  		message: "You have found a message from " + blobs.userId + "." + '<br>' + "The message reads: " + "'" + blobs.userMessage + "'" + "<br>" + "Dated: " + blobs.createdAt + '<a href="https://twitter.com/intent/tweet?screen_name=Bill_Searle&text=What%3F" class="twitter-mention-button" data-size="large" data-related="Bill_Searle">Tweet to @Bill_Searle</a>',
+  			buttons: [
+    							$.extend({}, vex.dialog.buttons.YES, {
+      						text: 'Tweet @' + blobs.userId,
+    							}), $.extend({}, vex.dialog.buttons.NO, {
+      						text: 'Back'
+   							 })
+  			],
+  			callback: function(data) {
+    			if (data === false) {
+      		console.log('no')
+    			} //else
+    			console.log('tweet');
   			}
-			});
-		}; // end modal
+				});
+			}; // end modal
 
 	blobs.makeBlobs();
 
