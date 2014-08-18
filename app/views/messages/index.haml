@@ -1,32 +1,20 @@
 %div#container
 
-%ul#scene
-	%li.layer.data-layer
+/ %ul#scene
+/ 	%li.layer.data-layer
 
 
 .remodal-bg
 	%a{:href => "#modal"} Click
-
-
 .remodal{"data-remodal-id" => "modal"}
 	%h1 Remodal
-	%p
-		Flat, responsive, lightweight, fast, easy customizable modal window plugin
-		with declarative state notation and hash tracking.
-	%p
-		Minified version size: ~4kb
-	%br/
-	%a.remodal-cancel{:href => "#"} Cancel
-	%a.remodal-confirm{:href => "#"} OK
+
 
 .remodal-bg
 	%a{:href => "#modal1"} Click
-
-
 .remodal{"data-remodal-id" => "modal1"}
-	%h1 Remodal
-	%p
-		Flat, responsive, lightweight, fast, easy wiuehfkwjn
+	%h1 Remodal1
+
 
 = form_for @new_message do |f|
 	%p
@@ -35,7 +23,7 @@
 	= f.submit
 
 
-%script
-	$(document).ready(function(){
-	$('#scene').parallax();
-	})
+/ %script
+/ 	$(document).ready(function(){
+/ 	$('#scene').parallax();
+/ 	})
