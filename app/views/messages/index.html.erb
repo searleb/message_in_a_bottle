@@ -9,10 +9,13 @@
 			<%= f.submit %>
 			<% end %>
 	<% else %>
+		<div id="sign-in">
+				<h3>
 				<%= link_to("Sign in to leave a message", '/users/auth/twitter') %>
+				</h3>
+		</div>
 	<% end %>
 </div>
-
 
 <script>vex.defaultOptions.className = 'vex-theme-flat-attack';
 </script>

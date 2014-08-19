@@ -18,7 +18,7 @@ $(document).ready(function() {
 				var userId = response[i].user_id;
 				var userMessage = response[i].message;
 				var userNickName = response[i].user.nickname;
-
+				idCounter ++;
 				// console.log( messageId +" "+ createdAt +" "+ userMessage +" "+ userId);
 			
 					var divsize = 50
@@ -36,21 +36,37 @@ $(document).ready(function() {
 					  }).css({
 	        	'position':'absolute',
 	        	'left': '0',
-	        	'top': '0',
+	        	'bottom': '0',
 	        }).appendTo( '#messages-container' );
 
-			  	$('.blob').velocity({
-			  		'left' : posx+'px',
-			  		'top' : posy+'px',
-						'height': '100px',
-						'width' : '100px',
-						},
-						'fast'
-					);
+				  	$('#blob'+idCounter).velocity({
+				  		'left' : posx+'px',
+				  		'top' : posy+'px',
+							},
+							'1000'
+							);
 			}; // end for loop
+					
 		});
 	}			
 	blobs.makeBlobs();
 
 }); // end document ready
 
+
+// var animate = function(){
+// 						console.log('animete')
+// 				  	$('#blob'+idCounter).velocity({
+// 				  		'left' : posx+'px',
+// 				  		'top' : posy+'px',
+// 							},
+// 							'1000'
+// 							);
+// 						requestAnimationFrame(animate);
+// 						}
+// 						requestAnimationFrame(animate);
+// function repeatOften() {
+//   // Do whatever
+//   requestAnimationFrame(repeatOften);
+// }
+// requestAnimationFrame(repeatOften);

@@ -1,9 +1,10 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	$('.blob').velocity({
-		'background-color' : 'blue',
-		'height': '100px',
-		'width' : '100px',
-	},
-		'slow');
-});
+// var clock = function(){
+// 	$('html').velocity({
+// 		'background-color' : 'green',
+// 	});
+// 	}
+
+// 	clock();
+// });

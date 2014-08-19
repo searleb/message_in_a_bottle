@@ -1,0 +1,13 @@
+<div class="col-md-8 col-md-offset-3">
+
+<%= link_to("home", root_path, :class => "home")%>
+
+
+	<div class="quote">
+	<blockquote>
+	  <h1><%= @message.message %></h1>
+	  <footer> <h3><%= @message.user.nickname %></h3> <h4><%= @message.created_at %></h4></footer>
+	</blockquote>
+	</div>
+
+</div>
