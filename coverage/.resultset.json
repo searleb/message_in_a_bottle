@@ -23,11 +23,29 @@
         null,
         null,
         null,
+        null,
         1,
         1,
         null,
         null,
         1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Bill/wdi/project3/message_in_a_bottle/app/models/concerns/active_record_helpers.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
         null,
         null
       ],
@@ -39,7 +57,6 @@
         1,
         null,
         1,
-        null,
         0,
         null,
         null,
@@ -47,9 +64,7 @@
         1,
         1,
         0,
-        null,
-        null,
-        1,
+        0,
         0,
         null,
         null,
@@ -59,12 +74,15 @@
         null,
         1,
         0,
+        null,
+        null,
+        1,
+        0,
         0,
         null,
         null,
         1,
         0,
-        null,
         0,
         null,
         null,
@@ -99,6 +117,6 @@
         null
       ]
     },
-    "timestamp": 1408282129
+    "timestamp": 1408419080
   }
 }

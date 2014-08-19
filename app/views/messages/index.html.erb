@@ -1,5 +1,5 @@
 <div id='messages-container'>
-
+<h1>HEROKU!?</h1>
 	<% if current_user %>
  			<%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
 			<%= form_for @new_message do |f| %>
@@ -26,26 +26,6 @@
 		var nickname = $this.data('nickname');
 		vex.dialog.open({
 			message: "'"+ message +"'" + '<br> This delightful message has been at sea since ' + date + "." + '<br> Signed, ' + nickname,
-			// buttons: [
-	  //   					$.extend({}, vex.dialog.buttons.YES, {
-	  //     				text: 'Tweet @' + userId,
-	  //   					}), $.extend({}, vex.dialog.buttons.NO, {
-	  //     				text: 'Nah, throw it.'
-	  //     			});
-	  //  					]
 			});
 	});
 </script>
-
-
-
-
-
-<!-- $('body').on('click', '.blob', function () {
-  var $this = $(this);
-  var author = $this.data('author');
-  var message = $this.data('message');
-
-  alert(author);
-  alert(message);
-}); -->
