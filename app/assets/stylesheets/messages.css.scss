@@ -11,10 +11,10 @@ body{
   color: #EBEBEB;
   background: -webkit-radial-gradient(circle, #4B4B4B, #1C1C1C);
 }
-a.home{
+.home{
   height: 125px;
   width: 125px;
-  background-image: url(homewhite.png);
+  // background-image: url(homewhite.png);
 }
 .quote{
   // border: 5px solid #EBEBEB;
@@ -31,7 +31,7 @@ a.home{
   // border-left: 10px solid red;
   // border-top: 10px solid grey;
   // border-bottom: 10px solid grey;
-  background: url(beer.png);
+  background: url(http://www.freestockphotos.biz/pictures/11/11917/beer.png);
   background-size: cover;
   cursor: pointer;
   position: relative;
