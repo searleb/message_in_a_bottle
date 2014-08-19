@@ -27,28 +27,20 @@
 		var fullLink = "http://tweet-in-a-bottle.herokuapp.com" + messageUrl;
 		var greeting = "I found your message! " + fullLink; 
 		
-		vex.dialog.alert({
-			message: date + '<br>' + "'" + message + "'" +'<br> Signed, ' + nickname + "." + '<br> Tweet @' + nickname + '<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A3000%2F&screen_name=twitterapi&share_with_retweet=never&tw_p=tweetbutton" class="twitter-share-button" data-url="https://dev.twitter.com" data-via="your_screen_name" data-lang="en">Tweet</a>',
+		vex.dialog.open({
+			message: date + '<br>' + "'" + message + "'" +'<br> Signed, ' + nickname + ".",
+			buttons: [
+    				$.extend({}, vex.dialog.buttons.YES, { text: 'Tweet @'+nickname }),
+    				$.extend({}, vex.dialog.buttons.NO, { text: 'Back'})
+  				],
 			callback: function(data) {
     	if (data === true) {
     		var leftPosition = (screen.width/2)-(400/2);
     		var topPosition = (screen.height/2)-(400/2); 
 
       window.open("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A3000%2F&screen_name=" + nickname + "&text=" + greeting + "&hashtags=MessageInABottle&share_with_retweet=never&tw_p=tweetbutton", 'title', 'height=400,width=400,left=' + leftPosition + ',' + 'top=' + topPosition)
-
     	};
     },
 	});
 });
 </script>
-
-<a href="https://twitter.com/intent/tweet?screen_name=twitterapi" class="twitter-mention-button" data-lang="en">Tweet to @twitterapi</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<script>window.twttr = (function (d, s, id) {
-  var t, js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id; js.src= "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-}(document, "script", "twitter-wjs"));</script>

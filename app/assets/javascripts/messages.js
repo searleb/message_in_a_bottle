@@ -9,7 +9,7 @@ $(document).ready(function() {
 			dataType: 'json',
 		}).done(function(response){
 			blobs.response = response
-			console.log(response);
+
 			for (var i = response.length - 1; i >= 0; i--) {
 				
 				var messageId = response[i].id;
@@ -19,14 +19,14 @@ $(document).ready(function() {
 				var userMessage = response[i].message;
 				var userNickName = response[i].user.nickname;
 
-				console.log( messageId +" "+ createdAt +" "+ userMessage +" "+ userId);
+				// console.log( messageId +" "+ createdAt +" "+ userMessage +" "+ userId);
 			
 					var divsize = 50
 	    		var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
 	    		var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
 
 					var blobDiv = $("<div />", {
-					    class : 'blob',
+					    class : 'blob floating',
 					    id : 'blob'+idCounter,
 					    'data-id' : messageId,
 					    'data-messageurl' : messageUrl,
@@ -35,13 +35,21 @@ $(document).ready(function() {
 					    'data-date' : createdAt 
 					  }).css({
 	        	'position':'absolute',
-	        	'left':posx+'px',
-	        	'top':posy+'px',
+	        	'left': '0',
+	        	'top': '0',
 	        }).appendTo( '#messages-container' );
+
+			  	$('.blob').velocity({
+			  		'left' : posx+'px',
+			  		'top' : posy+'px',
+						'height': '100px',
+						'width' : '100px',
+						},
+						'fast'
+					);
 			}; // end for loop
 		});
-	}
-			
+	}			
 	blobs.makeBlobs();
 
 }); // end document ready
