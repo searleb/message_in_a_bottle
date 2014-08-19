@@ -21,11 +21,19 @@
 <script>
 	$('#messages-container').on('click', '.blob', function(){
 		var $this = $(this);
-		var messages = $this.data('message');
+		var message = $this.data('message');
 		var date = $this.data('date');
-		blobs.modal(
-			messages, date
-			);
+		var nickname = $this.data('nickname');
+		vex.dialog.open({
+			message: "'"+ message +"'" + '<br> This delightful message has been at sea since ' + date + "." + '<br> Signed, ' + nickname,
+			// buttons: [
+	  //   					$.extend({}, vex.dialog.buttons.YES, {
+	  //     				text: 'Tweet @' + userId,
+	  //   					}), $.extend({}, vex.dialog.buttons.NO, {
+	  //     				text: 'Nah, throw it.'
+	  //     			});
+	  //  					]
+			});
 	});
 </script>
 

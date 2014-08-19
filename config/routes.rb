@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
+  root :to => 'messages#index'
+  
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks'}
 
+  get 'messages/sample' => 'messages#sample'
   resources :messages
   resources :admin
-  root :to => 'messages#index'
-  get 'ajax/lookup' => 'ajax#lookup'
 end
 
-
-#                   Prefix Verb     URI Pattern                            Controller#Action
+#                  Prefix Verb     URI Pattern                            Controller#Action
+#                     root GET      /                                      messages#index
 #         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
 #             user_session POST     /users/sign_in(.:format)               devise/sessions#create
 #     destroy_user_session DELETE   /users/sign_out(.:format)              devise/sessions#destroy
-#  user_omniauth_authorize GET|POST /users/auth/:provider(.:format)        callbacks#passthru {:provider=>/twitter/}
-#   user_omniauth_callback GET|POST /users/auth/:action/callback(.:format) callbacks#(?-mix:twitter)
+#  user_omniauth_authorize GET|POST /users/auth/:provider(.:format)        omniauth_callbacks#passthru {:provider=>/twitter/}
+#   user_omniauth_callback GET|POST /users/auth/:action/callback(.:format) omniauth_callbacks#(?-mix:twitter)
 #            user_password POST     /users/password(.:format)              devise/passwords#create
 #        new_user_password GET      /users/password/new(.:format)          devise/passwords#new
 #       edit_user_password GET      /users/password/edit(.:format)         devise/passwords#edit
@@ -26,6 +27,7 @@ end
 #                          PATCH    /users(.:format)                       devise/registrations#update
 #                          PUT      /users(.:format)                       devise/registrations#update
 #                          DELETE   /users(.:format)                       devise/registrations#destroy
+#          messages_sample GET      /messages/sample(.:format)             messages#sample
 #                 messages GET      /messages(.:format)                    messages#index
 #                          POST     /messages(.:format)                    messages#create
 #              new_message GET      /messages/new(.:format)                messages#new
@@ -42,5 +44,3 @@ end
 #                          PATCH    /admin/:id(.:format)                   admin#update
 #                          PUT      /admin/:id(.:format)                   admin#update
 #                          DELETE   /admin/:id(.:format)                   admin#destroy
-#                     root GET      /                                      messages#index
-#              ajax_lookup GET      /ajax/lookup(.:format)                 ajax#lookup

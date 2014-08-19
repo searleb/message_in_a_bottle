@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
 	
 	def index
-		# @messages = Message.all.sample(15)
 		@new_message = Message.new
 	end
 
@@ -26,10 +25,9 @@ class MessagesController < ApplicationController
 		message.destroy
 	end
 
-	def lookup # WTF doesn't this work with the routes
-		@messages = Message.all.sample(15)
-		# @messages_json = {"message" => @messages}
-		render :json => @messages
+	def sample 
+		messages = Message.all.sample(25)
+		render :json => messages, :include => :user # {:user => {:only => :nickname}} 
 	end
 
 end
