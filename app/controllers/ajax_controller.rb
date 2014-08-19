@@ -8,11 +8,10 @@ class AjaxController < ApplicationController
 		end
 
 		user_nickname = messages.each do |m|
-			puts m.user.nickname
+			m.user.nickname
 		end
 
 		messages_json = {"message" => messages_id, "nickname" => user_nickname}
-
 		render :json => messages_json
 	end
 
