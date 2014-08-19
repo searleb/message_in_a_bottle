@@ -29,6 +29,7 @@ $(document).ready(function() {
 					    class : 'blob',
 					    id : 'blob'+idCounter,
 					    'data-id' : messageId,
+					    'data-messageurl' : messageUrl,
 					    'data-nickname' : userNickName,
 					    'data-message' : userMessage,
 					    'data-date' : createdAt 
