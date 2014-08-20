@@ -1,17 +1,28 @@
 #sign-in{
+	opacity: 0;
   border: 2px solid white;
+  height: 104px;
 
   h3{
     vertical-align: middle;
+    margin-bottom: 20px;
   }
   a{
     color: white; 
   }
+	.twitter-ico{
+		height: 2.5em;
+		width: 2.5em;
+		display: none;
+	}
+	.sign-in-link{
+		display: none;
+  }
 }
+
 label{
 	font-weight: 400;
 }
-
 .btn{
 	background-color: transparent;
 	border: 2px solid white;

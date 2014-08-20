@@ -21,6 +21,11 @@ $('#messages-container').on('click', '.blob', function() {
 					});
 	    }
 		});
+}); //end function
 
-	
-}); //end fucntion
+$(document).ready(function(){
+	$("#sign-in").velocity("transition.slideDownBigIn", { delay: 2000 });
+	$(".sign-in-link").velocity("transition.slideRightBigIn", { delay: 3000 });
+	$(".twitter-ico").velocity("transition.slideLeftBigIn", { delay: 3000 });
+
+});
