@@ -7,13 +7,13 @@ $('#messages-container').on('click', '.blob', function() {
 	$this.velocity({ 
 			top: $top+'px'
 	}, {
-	    duration: 200,
+	    duration: 300,
 	    easing: "ease-out",
 	    complete: function() {
 				$this.velocity({ 
 						top: documentHeight+'px',
 				}, {
-				    duration: 100,
+				    duration: 200,
 				    easing: "linear",
 				    complete: function() {
 							$this.remove();
