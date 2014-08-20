@@ -18,6 +18,7 @@
 #  provider               :string(255)
 #  uid                    :string(255)
 #  nickname               :string(255)
+#  image                  :string(255)
 #
 
 class User < ActiveRecord::Base

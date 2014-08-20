@@ -1,0 +1,23 @@
+#sign-in{
+	z-index: 100000;
+  border: 2px solid white;
+
+  h3{
+    vertical-align: middle;
+  }
+  a{
+    color: white; 
+  }
+}
+label{
+	font-weight: 400;
+}
+
+.btn{
+	background-color: transparent;
+	border: 2px solid white;
+}
+.btn:hover{
+	background-color: #f7f7f7;
+	color: #404040;
+}

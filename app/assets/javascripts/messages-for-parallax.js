@@ -18,12 +18,13 @@ $(document).ready(function() {
 				var userId = response[i].user_id;
 				var userMessage = response[i].message;
 				var userNickName = response[i].user.nickname;
+				var userImage = response[i].user.image;
 				idCounter ++;
 				// console.log( messageId +" "+ createdAt +" "+ userMessage +" "+ userId);
 			
 					var divsize = 50
-	    		var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
-	    		var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
+	    		var posx = (Math.random() * ($(window).width() - divsize)).toFixed();
+	    		var posy = (Math.random() * ($(window).height() - divsize)).toFixed();
 	    		// var posy = (Math.random() * (25 - 0) + 0).toFixed();
 	    		var sceneId = (Math.random() * (4 - 1) + 1).toFixed();
 	    		var dataDepth = (Math.random() * (1 - 0.20) + 0).toFixed(2);
@@ -38,12 +39,12 @@ $(document).ready(function() {
 					    'data-messageurl' : messageUrl,
 					    'data-nickname' : userNickName,
 					    'data-message' : userMessage,
-					    'data-date' : createdAt 
-	        }).appendTo( '#scene' );
+					    'data-date' : createdAt,
+	        }).css('background-image', 'url(' + userImage + ')').appendTo( '#scene' );
 
 	        var blobText = $("<p />", {
 	        	text : userNickName,
-	        }).appendTo( '#blob'+idCounter );
+	        }).prependTo( '#blob'+idCounter );
 
 				  	$('#blob'+idCounter).velocity({
 				  		'left' : posx+'px',
@@ -60,8 +61,8 @@ $(document).ready(function() {
 				$scene.parallax('friction', 0.2, 0.2);
 				$scene.parallax('origin', 0.0, 0.0);
 				$scene.parallax('enable');
-				// $scene.parallax('updateLayers');
-				// $scene.parallax('calibrate', false, true);
+				$scene.parallax('updateLayers');
+				$scene.parallax('calibrate', false, true);
 				// $scene.parallax('invert', false, true);
 				// $scene.parallax('limit', false, 10);
 		});

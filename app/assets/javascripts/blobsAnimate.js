@@ -1,23 +1,26 @@
 $('#messages-container').on('click', '.blob', function() {
+	var documentHeight = $(window).height().toFixed();
 	var $this = $(this);
 	var $top = $(this).position();
-
-	console.log($top);
-	var padding = '20';
-	var growWidth = '70';
-	var shrinkHeight = '0';
-	var shrinkWidth = '0';
-
+ 	$top = ($top.top - 20);
 	
 	$this.velocity({ 
-			top: '-100px',
-			left: '-100px'
+			top: $top+'px'
 	}, {
-	    duration: 1000,
-	    easing: "ease-in-out",
+	    duration: 200,
+	    easing: "ease-out",
 	    complete: function() {
-				$this.remove();
-			}
+				$this.velocity({ 
+						top: documentHeight+'px',
+				}, {
+				    duration: 100,
+				    easing: "linear",
+				    complete: function() {
+							$this.remove();
+						}
+					});
+	    }
 		});
+
 	
 }); //end fucntion
