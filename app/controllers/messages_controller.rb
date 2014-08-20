@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
 		@new_message = Message.new
 	end
 
-
 	def create
 		message = Message.new message_params
 		message.user = current_user

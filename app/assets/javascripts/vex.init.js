@@ -26,6 +26,3 @@
     },
 	});
 });
-
-
-	// toggling animationg from different places
