@@ -1,19 +1,23 @@
 $('#messages-container').on('click', '.blob', function() {
 	var $this = $(this);
-	var growHeight = '70';
+	var $top = $(this).position();
+
+	console.log($top);
+	var padding = '20';
 	var growWidth = '70';
 	var shrinkHeight = '0';
 	var shrinkWidth = '0';
 
 	
-
 	$this.velocity({ 
-			hight: growHeight+"px",
-	    width: growWidth+"px",
+			top: '-100px',
+			left: '-100px'
 	}, {
-	    duration: 400,
-	    easing: "swing",
-	});
+	    duration: 1000,
+	    easing: "ease-in-out",
+	    complete: function() {
+				$this.remove();
+			}
+		});
 	
-	// $this.remove();
 }); //end fucntion
