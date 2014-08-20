@@ -29,7 +29,7 @@ $(document).ready(function() {
 	    		var sceneId = (Math.random() * (4 - 1) + 1).toFixed();
 	    		var dataDepth = (Math.random() * (1 - 0.20) + 0).toFixed(2);
 	    		var documentHeight = $(window).height().toFixed();
-	    		console.log(documentHeight);
+	    		console.log(posy);
 
 					var blobDiv = $("<li />", {
 					    class : 'layer blob',
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 	        var blobText = $("<p />", {
 	        	text : userNickName,
-	        }).prependTo( '#blob'+idCounter );
+	        }).appendTo( '#blob'+idCounter );
 
 				  	$('#blob'+idCounter).velocity({
 				  		'left' : posx+'px',

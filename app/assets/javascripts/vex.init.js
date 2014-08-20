@@ -17,6 +17,7 @@
   				],
 			callback: function(data) {
     	if (data === true) {
+
     		var leftPosition = (screen.width/2)-(400/2);
     		var topPosition = (screen.height/2)-(400/2); 
 
@@ -25,3 +26,6 @@
     },
 	});
 });
+
+
+	// toggling animationg from different places

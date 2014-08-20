@@ -15,14 +15,9 @@
   border-radius: 100%;
   cursor: pointer;
   background-color: #f7f7f7;
-  background-image: -webkit-gradient(radial, left top, left bottom, from(#f7f7f7), to(#404040));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #404040); 
-  background-image: -moz-linear-gradient(top, #f7f7f7, #404040); 
-  background-image: -ms-linear-gradient(top, #f7f7f7, #404040); 
-  background-image: -o-linear-gradient(top, #f7f7f7, #404040);
+	background-size: contain;
   box-shadow: 0px 0px 10px #aaa, inset 0px 2px 3px #fff;
-  color: #FFF;
-  // transition: all 0.5s ease; 
+  color: transparent;
 	
 		p{
 			word-wrap: break-word;
@@ -30,13 +25,11 @@
 			text-align: center;
 			vertical-align: middle;
 			line-height: 60px;
-			// padding-top: 14px;
 		}
 }
 
 .blob:hover{
 	text-decoration: none;
-  color: #555;
-  background: #f5f5f5;
-  background-image: -webkit-gradient(radial, left top, left bottom, from(#e7e7e7), to(#f7f7f7));
+  color: #FFF;
+  box-shadow: 0px 0px 80px #aaa, inset 0px 2px 3px #fff;
 }
