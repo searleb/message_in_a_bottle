@@ -229,7 +229,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :twitter, '1lIHogPA1ABL2mSxdhLPoh728', 'f46ijdddFUJuOxpvN6dkMTiEehpkF5Fw8JstzIu7iUZYWAB1Jg'
+  config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET']
   # config.omniauth :github, '72e97efee9e1e743a573', '5449f3a27af01fe26df76f8ef3dd2f76965c7a17', scope: 'user:email'
   
 

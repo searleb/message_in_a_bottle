@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
 	end
 
 	def sample 
-		messages = Message.all.sample(75)
+		messages = Message.all.sample(150)
 		render :json => messages, :include => :user # {:user => {:only => :nickname}} 
 	end
 

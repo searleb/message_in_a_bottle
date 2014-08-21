@@ -7,7 +7,7 @@ FactoryGirl.define do
 		# f.sequence(:email) { Faker::Internet.email }
 		factory :user_with_messages do
 			after(:create) do |u|
-				FactoryGirl.create_list(:message, Random.rand(10..50), :user => u)
+				FactoryGirl.create_list(:message, 150, :user => u)
 			end
 		end
 	end

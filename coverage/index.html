@@ -14,18 +14,18 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-21T12:47:11+10:00">2014-08-21T12:47:11+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-21T16:46:00+10:00">2014-08-21T16:46:00+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">57.45%</span></span>
+    (<span class="covered_percent"><span class="red">68.09%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.59
+         0.69
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>6</b> files in total.
     <b>47</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
-    <span class="red"><b>20</b> lines missed </span>
+    <span class="green"><b>32</b> lines covered</span> and
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#b4910016104ef6d6e363fe8317bb1948475067e1" class="src_link" title="app/controllers/messages_controller.rb">app/controllers/messages_controller.rb</a></td>
-        <td class="red strong">48.0 %</td>
+        <td class="red strong">68.0 %</td>
         <td>44</td>
         <td>25</td>
-        <td>12</td>
-        <td>13</td>
-        <td>0.5</td>
+        <td>17</td>
+        <td>8</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -119,11 +119,11 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">51.85%</span></span>
+    (<span class="covered_percent"><span class="red">70.37%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.54
+         0.72
        </span>
     </span> hits/line)
   </h2>
@@ -131,8 +131,8 @@
   <div>
     <b>2</b> files in total.
     <b>27</b> relevant lines. 
-    <span class="green"><b>14</b> lines covered</span> and
-    <span class="red"><b>13</b> lines missed </span>
+    <span class="green"><b>19</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -160,12 +160,12 @@
       
       <tr>
         <td class="strong"><a href="#b4910016104ef6d6e363fe8317bb1948475067e1" class="src_link" title="app/controllers/messages_controller.rb">app/controllers/messages_controller.rb</a></td>
-        <td class="red strong">48.0 %</td>
+        <td class="red strong">68.0 %</td>
         <td>44</td>
         <td>25</td>
-        <td>12</td>
-        <td>13</td>
-        <td>0.5</td>
+        <td>17</td>
+        <td>8</td>
+        <td>0.7</td>
       </tr>
       
     </tbody>
@@ -422,11 +422,11 @@
         <div class="source_table" id="b4910016104ef6d6e363fe8317bb1948475067e1">
   <div class="header">
     <h3>app/controllers/messages_controller.rb</h3>
-    <h4><span class="red">48.0 %</span> covered</h4>
+    <h4><span class="red">68.0 %</span> covered</h4>
     <div>
       <b>25</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -481,14 +481,14 @@
           <code class="ruby">		message = Message.new message_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">		message.message = ActionController::Base.helpers.sanitize(message.message)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">		message.user = current_user</code>
         </li>
@@ -499,20 +499,20 @@
           <code class="ruby">		</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">		if message.save </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">			flash[:success] = &quot;Your message has been cast out to the digital sea!&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">			redirect_to root_path</code>
         </li>
@@ -640,7 +640,7 @@
         <li class="missed" data-hits="0" data-linenumber="35">
           
           
-          <code class="ruby">		messages = Message.all.sample(75)</code>
+          <code class="ruby">		messages = Message.all.sample(150)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="36">
