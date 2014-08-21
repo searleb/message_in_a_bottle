@@ -2,13 +2,17 @@
   
 
 			<div class="row">
+			<!-- if logged in -->
 				<% if current_user %>
 					<div class="row">
 						<div class="col-md-2">
 			 				<%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
 			 			</div>
+						<div class="col-md-2 col-md-offset-8 text-right">
+							<a href="https://twitter.com/share" id="twitter-btn" class="twitter-share-button" data-via="Bill_Searle" data-hashtags="MessageInABottle">Tweet</a>
+						</div>
 					  <% flash.each do |key, value| %>
-					        <div class="<%= flash_class(key) %> text-center flash col-md-6 col-md-offset-1">
+					        <div class="<%= flash_class(key) %> text-center flash col-md-6 col-md-offset-3">
 					              <%= value %>
 					        </div>
 					  <% end %>
@@ -24,6 +28,8 @@
 						<% end %>
 				</div>
 				<% else %>
+				<!-- if not logged in -->
+						<h1 class="text-center">Message In A <s>Bottle</s> Bubble.</h1>
 					<div id="sign-in" class="col-md-4 col-md-offset-4 text-center">
 							<h3>
 							<%= image_tag("twitterwhite.png", :class => "twitter-ico")%>

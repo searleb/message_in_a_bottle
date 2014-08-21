@@ -1,12 +1,15 @@
 <div class="row">
-	<div class="col-md-1">
-		<%= link_to("home", root_path, :class => "home")%>
+	<div class="col-md-8 col-md-offset-2">
+		<a href="/"><h1 class="text-center">Message In A <s>Bottle</s> Bubble.</h1></a>
 	</div>
+	<div class="col-md-2 text-right">
+			<a href="https://twitter.com/share" id="twitter-btn" class="twitter-share-button" data-via="Bill_Searle" data-hashtags="MessageInABottle">Tweet</a>
+		</div>
 </div>
-<div class="col-md-8 col-md-offset-3 vertical-center">
+<div class="col-md-8 col-md-offset-2 vertical-center">
 	<div class="quote">
-	<blockquote>
-	  <h1><%= @message.message %></h1><%= @message.user.nickname %> <h4><%= @message.created_at %></h4></footer>
-	</blockquote>
+		<blockquote>
+			<h1><%= @message.message %></h1><%= @message.user.nickname %> <h4><%= @message.created_at %></h4></footer>
+		</blockquote>
 	</div>
 </div>

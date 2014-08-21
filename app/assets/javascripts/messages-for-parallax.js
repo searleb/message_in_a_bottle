@@ -37,7 +37,7 @@ $(document).ready(function() {
 				console.log(messageId);
 
 				var dataDepth = (Math.random() * (1 - 0.20) + 0).toFixed(2);
-
+				// Creat and append all blobs
 				var blobDiv = $("<li />", {
 					class : 'layer blob',
 					id : 'blob'+idCounter,
@@ -51,6 +51,7 @@ $(document).ready(function() {
 					'background-image': 'url(' + userImage + ')'
 				}).appendTo( '#scene' );
 
+				// append username text to the blob per message
 				var blobText = $("<p />", {
 					text : userNickName,
 				}).appendTo( '#blob'+idCounter );
