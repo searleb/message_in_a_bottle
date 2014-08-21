@@ -1,3 +1,4 @@
+	// on click jump and drop bubble animation
 $('#messages-container').on('click', '.blob', function() {
 	var documentHeight = $(window).height().toFixed();
 	var $this = $(this);

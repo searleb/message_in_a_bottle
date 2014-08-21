@@ -1,12 +1,19 @@
 <div id='messages-container'>
-		<!-- <li class="layer" data-depth="1.00"> -->
+  
+
 			<div class="row">
 				<% if current_user %>
 					<div class="row">
 						<div class="col-md-2">
 			 				<%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
 			 			</div>
+					  <% flash.each do |key, value| %>
+					        <div class="<%= flash_class(key) %> text-center flash col-md-6 col-md-offset-1">
+					              <%= value %>
+					        </div>
+					  <% end %>
 			 		</div>
+
 				<div id="logged-in" class="col-md-4 col-md-offset-4 text-center">
 						<%= form_for @new_message do |f| %>
 						<p>
@@ -27,18 +34,5 @@
 				<% end %>
 			</div>
 	<ul id="scene" class="scene">
-		<!-- </li> -->
 	</ul>
 </div>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-53990682-1', 'auto');
-  ga('send', 'pageview');
-
-</script>

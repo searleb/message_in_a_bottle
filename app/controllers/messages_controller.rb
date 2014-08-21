@@ -6,9 +6,16 @@ class MessagesController < ApplicationController
 
 	def create
 		message = Message.new message_params
+		message.message = ActionController::Base.helpers.sanitize(message.message)
 		message.user = current_user
-		message.save # add if save 
-		redirect_to root_path
+		
+		if message.save 
+			flash[:success] = "Your message has been cast out to the digital sea!"
+			redirect_to root_path
+		else
+			flash[:error]
+			puts "Oh no, something went wrong. Please try again."
+		end
 	end
 
 	def new

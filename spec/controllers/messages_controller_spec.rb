@@ -11,8 +11,8 @@ RSpec.describe MessagesController, :type => :controller do
 	describe "GET index" do
 		before(:each) {Message.create(message: "wtf?")}
 		it "assigns all messages to @messages" do
-			expect(@messages).to change by(1)
-			# expect(assigns(@messages)).to eq(Message.all) 
+			get 'index'
+			expect(assigns(:new_message)).to be_a_new(Message) 
 		end
 	end
 
