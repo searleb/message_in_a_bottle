@@ -34,7 +34,7 @@ $(document).ready(function() {
 				var userNickName = response[i].user.nickname;
 				var userImage = response[i].user.image;
 				idCounter ++;
-				console.log(messageId);
+				// console.log(messageId);
 
 				var dataDepth = (Math.random() * (1 - 0.20) + 0).toFixed(2);
 				// Creat and append all blobs
@@ -74,9 +74,16 @@ $(document).ready(function() {
 				// $scene.parallax('invert', false, true);
 				// $scene.parallax('limit', false, 10);
 			});
-}			
-blobs.makeBlobs();
+}	
 
+$('#reset').on('click', function(){
+		$('#scene').empty();	
+		// $('#scene').fadeOut('2000');
+		// $('#scene').fadeIn('1000');
+		blobs.makeBlobs();
+}); 
+
+blobs.makeBlobs();
 }); // end document ready
 
 

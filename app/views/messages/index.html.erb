@@ -1,12 +1,11 @@
 <div id='messages-container'>
-  
-
 			<div class="row">
 			<!-- if logged in -->
 				<% if current_user %>
 					<div class="row">
 						<div class="col-md-2">
-			 				<%= link_to("sign out", destroy_user_session_path ,:method => :delete) %>
+			 				<%= link_to("sign out", destroy_user_session_path ,:method => :delete, :class => 'btn') %>
+							<div id="reset" class="btn">search again</div>
 			 			</div>
 						<div class="col-md-2 col-md-offset-8 text-right">
 							<a href="https://twitter.com/share" id="twitter-btn" class="twitter-share-button" data-via="Bill_Searle" data-hashtags="MessageInABottle">Tweet</a>
