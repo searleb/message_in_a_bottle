@@ -11,7 +11,7 @@ RSpec.describe MessagesController, :type => :controller do
 	describe "GET index" do
 
 		before(:each) {Message.create(message: "wtf?")}
-		it "assigns all messages to @messages" do
+		it "creates a new message object in @messages" do
 			get 'index'
 			expect(assigns(:new_message)).to be_a_new(Message) 
 		end
@@ -35,6 +35,13 @@ RSpec.describe MessagesController, :type => :controller do
 		end
 	end
 
+	describe "GET new" do
+		before(:each) {Message.create(message: "wtf?")}
+		it "creates a new message object in @message" do
+			get 'new'
+			expect(assigns(:new_message)).to be_a_new(Message) 
+		end
+	end
 
 	# describe "POST create" do
  #    describe "with valid params" do
