@@ -4,6 +4,7 @@
 		var $this = $(this);
 		var message = $this.data('message');
 		var date = $this.data('date');
+		date = new Date(date).toDateString();
 		var nickname = $this.data('nickname');
 		var messageUrl = $this.data('messageurl');
 		var fullLink = "http://tweet-in-a-bottle.herokuapp.com" + messageUrl;
