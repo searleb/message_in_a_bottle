@@ -34,10 +34,9 @@ $(document).ready(function() {
 				var userNickName = response[i].user.nickname;
 				var userImage = response[i].user.image;
 				idCounter ++;
-				// console.log(messageId);
 
 				var dataDepth = (Math.random() * (1 - 0.20) + 0).toFixed(2);
-				// Creat and append all blobs
+				// Create and append all blobs to #scene
 				var blobDiv = $("<li />", {
 					class : 'layer blob',
 					id : 'blob'+idCounter,

@@ -15,5 +15,5 @@
 //= require bootstrap-sprockets
 //= require velocity.js
 //= require velocity-ui.js
-//= require blobsAnimate.js
+//= require animations.js
 //= require_tree .
