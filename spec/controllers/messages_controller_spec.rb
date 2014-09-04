@@ -15,14 +15,11 @@ RSpec.describe MessagesController, :type => :controller do
 			get 'index'
 			expect(assigns(:new_message)).to be_a_new(Message) 
 		end
-
 	end
 
 	describe "POST create" do
 		before do
 			@user = User.create(email: 'test@example.com', password: 'password', password_confirmation: 'password')
-
-			p @user
 		end
 
 		describe "with valid params" do
@@ -35,11 +32,9 @@ RSpec.describe MessagesController, :type => :controller do
 		end
 	end
 
-	describe "GET new" do
-		before(:each) {Message.create(message: "wtf?")}
-		it "creates a new message object in @message" do
-			get 'new'
-			expect(assigns(:new_message)).to be_a_new(Message) 
+	describe "GET show" do
+		it "finds messages by id" do
+			expect(assigns(:message)).to be_a(Message)
 		end
 	end
 

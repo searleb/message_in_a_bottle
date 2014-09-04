@@ -1,28 +1,18 @@
-== README
+== Tweet In A Bottle
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=== WDI Project 3.
 
-Things you may want to cover:
+The idea of this project was to recreate a message in a bottle and be able to let the original sender know you found it.
+This was achieved using Twitters user authentication and tweet button.
 
-* Ruby version
+Once signed in you are able to leave a message which is saved into a Postgres database, a custom URL is generated for each message and used to build a URL to tweet at the messages owner at a later date.
 
-* System dependencies
+=== Built with:
 
-* Configuration
+* Ruby on Rails
 
-* Database creation
+* Javacsript & jQuery
 
-* Database initialization
+* Velocity.js
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Parallax.js

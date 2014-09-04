@@ -2,7 +2,7 @@ var blobs = blobs || {};
 var idCounter = 1
 
 blobs.animate = function(counterID){
-	var divsize = 50
+	var divsize = 60
 	var posx = (Math.random() * ($(window).width() - divsize)).toFixed();
 	var posy = (Math.random() * ($(window).height() - divsize)).toFixed();
 	
@@ -71,15 +71,11 @@ $(document).ready(function() {
 				$scene.parallax('enable');
 				$scene.parallax('updateLayers');
 				$scene.parallax('calibrate', false, true);
-				// $scene.parallax('invert', false, true);
-				// $scene.parallax('limit', false, 10);
 			});
 }	
 
 $('#reset').on('click', function(){
 		$('#scene').empty();	
-		// $('#scene').fadeOut('2000');
-		// $('#scene').fadeIn('1000');
 		blobs.makeBlobs();
 }); 
 
