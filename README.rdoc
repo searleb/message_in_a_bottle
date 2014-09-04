@@ -16,3 +16,11 @@ Once signed in you are able to leave a message which is saved into a Postgres da
 * Velocity.js
 
 * Parallax.js
+
+=== Todo:
+
+* Finish RSPEC tests
+
+=== Bugs:
+
+* If a user updates their profile picture the link saved on sign up will become invalid and no profile picture will be shown in their bubbles.
