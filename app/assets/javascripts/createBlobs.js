@@ -22,7 +22,7 @@ blobs.animate = function(counterID){
 $(document).ready(function() {
 	
 	blobs.makeBlobs = function () {
-		// make a get request for the a sample of the database
+		// make a get request for a sample of the database
 		$.ajax({
 			url: '/messages/sample',
 			type: 'get',
