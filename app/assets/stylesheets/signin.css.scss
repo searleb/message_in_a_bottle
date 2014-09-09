@@ -26,8 +26,14 @@ label{
 .btn{
 	background-color: transparent;
 	border: 2px solid white;
+	margin: 5px;
 }
 .btn:hover{
 	background-color: #f7f7f7;
 	color: #404040;
+}
+.twitter-share-button{
+	right: 0px;
+	top: 5px;
+	position: fixed;
 }

@@ -13,8 +13,7 @@ class MessagesController < ApplicationController
 			flash[:success] = "Your message has been cast out to the digital sea!"
 			redirect_to root_path
 		else
-			flash[:error]
-			puts "Oh no, something went wrong. Please try again."
+			flash[:error] = "Oh no, something went wrong. Please try again."
 		end
 	end
 
@@ -29,6 +28,7 @@ class MessagesController < ApplicationController
 	def destroy
 		message = Message.find params[:id]
 		message.destroy
+		redirect_to messages_path
 	end
 
 	def sample 

@@ -1,43 +1,43 @@
 <div id='messages-container'>
-			<div class="row">
-			<!-- if logged in -->
-				<% if current_user %>
-					<div class="row">
-						<div class="col-md-2">
-			 				<%= link_to("sign out", destroy_user_session_path ,:method => :delete, :class => 'btn') %>
-							<div id="reset" class="btn">search again</div>
-			 			</div>
-						<div class="col-md-2 col-md-offset-8 text-right">
-							<a href="https://twitter.com/share" id="twitter-btn" class="twitter-share-button" data-via="Bill_Searle" data-hashtags="MessageInABottle">Tweet</a>
-						</div>
-					  <% flash.each do |key, value| %>
-					        <div class="<%= flash_class(key) %> text-center flash col-md-6 col-md-offset-1">
-					              <%= value %>
-					        </div>
-					  <% end %>
-			 		</div>
-
-				<div id="logged-in" class="col-md-4 col-md-offset-4 text-center">
-						<%= form_for @new_message do |f| %>
-						<p>
-							<%= f.label :"Type something of great importance" %>
-							<%= f.text_field :message, :autofocus => true, :class => 'form-control', :placeholder => "I'm stuck, send help." %>
-						</p>
-						<%= f.submit :class => 'btn'%>
-						<% end %>
-				</div>
-				<% else %>
-				<!-- if not logged in -->
-						<h1 class="text-center">Message In A <s>Bottle</s> Bubble.</h1>
-					<div id="sign-in" class="col-md-4 col-md-offset-4 text-center">
-							<h3>
-							<%= image_tag("twitterwhite.png", :class => "twitter-ico")%>
-
-							<%= link_to("Sign in to leave a message", '/users/auth/twitter', :class => 'sign-in-link')%>
-							</h3>
-					</div>
-				<% end %>
+	<div class="row">
+		<!-- if logged in -->
+		<% if current_user %>
+		<div class="row">
+			<div class="col-md-4">
+				<%= link_to("sign out", destroy_user_session_path ,:method => :delete, :class => 'btn') %>
+					<div id="reset" class="btn">search again</div>
+					
+						<a href="https://twitter.com/share" id="twitter-btn" class="twitter-share-button text-right" data-via="Bill_Searle" data-hashtags="MessageInABottle">Tweet</a>
+					
 			</div>
+			<% flash.each do |key, value| %>
+			<div class="<%= flash_class(key) %> text-center flash col-md-6 col-md-offset-1">
+				<%= value %>
+			</div>
+			<% end %>
+		</div>
+
+		<div id="logged-in" class="col-md-4 col-md-offset-4 text-center">
+			<%= form_for @new_message do |f| %>
+			<p>
+				<%= f.label :"Type something of great importance" %>
+				<%= f.text_field :message, :autofocus => true, :class => 'form-control', :placeholder => "I'm stuck, send help." %>
+			</p>
+			<%= f.submit :class => 'btn'%>
+			<% end %>
+		</div>
+		<% else %>
+		<!-- if not logged in -->
+		<h1 class="text-center">Message In A <s>Bottle</s> Bubble.</h1>
+		<div id="sign-in" class="col-md-4 col-md-offset-4 text-center">
+			<h3>
+				<%= image_tag("twitterwhite.png", :class => "twitter-ico")%>
+
+				<%= link_to("Sign in to leave a message", '/users/auth/twitter', :class => 'sign-in-link')%>
+			</h3>
+		</div>
+		<% end %>
+	</div>
 	<ul id="scene" class="scene">
 	</ul>
 </div>
